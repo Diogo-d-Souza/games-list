@@ -1,8 +1,10 @@
 package com.projetospring.dslist.service;
 
 import com.projetospring.dslist.DTO.GameDTO;
+import com.projetospring.dslist.DTO.GameListDTO;
 import com.projetospring.dslist.DTO.GameMinDTO;
 import com.projetospring.dslist.entities.Game;
+import com.projetospring.dslist.repositories.GameListRepository;
 import com.projetospring.dslist.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,4 +31,5 @@ public class GameService {
         List<GameMinDTO> dto = result.stream().map(x -> new GameMinDTO(x)).toList();
         return dto;
     }
+
 }
