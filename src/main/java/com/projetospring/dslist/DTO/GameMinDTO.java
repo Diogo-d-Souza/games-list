@@ -2,7 +2,6 @@ package com.projetospring.dslist.DTO;
 
 import com.projetospring.dslist.entities.Game;
 import com.projetospring.dslist.projections.GameMinProjection;
-import jakarta.persistence.Column;
 
 public class GameMinDTO {
 
@@ -25,7 +24,7 @@ public class GameMinDTO {
     public GameMinDTO(GameMinProjection projection){
         id = projection.getId();
         title = projection.getTitle();
-        year = projection.getYear();
+        year = projection.getGameYear();
         imgUrl = projection.getImgUrl();
         shortDescription = projection.getShortDescription();
     }
